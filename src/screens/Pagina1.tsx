@@ -3,6 +3,7 @@ import {Button, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {DrawerScreenProps} from '@react-navigation/drawer';
 import {RootStackParamsList} from '../navigation/StackNavigator';
 import {mainStyles} from '../theme/mainStyles';
+import Icon from 'react-native-vector-icons/Ionicons';
 //import {StackScreenProps} from '@react-navigation/stack';
 
 //interface Props extends StackScreenProps<RootStackParamsList, 'Persona'> {}
@@ -12,7 +13,12 @@ const Pagina1 = ({navigation, route}: Props) => {
   useEffect(() => {
     navigation.setOptions({
       headerLeft: () => (
-        <Button title="Menu" onPress={() => navigation.toggleDrawer()} />
+        <Icon
+          name="menu-outline"
+          size={35}
+          color="#900"
+          onPress={() => navigation.toggleDrawer()}
+        />
       ),
     });
   }, []);
