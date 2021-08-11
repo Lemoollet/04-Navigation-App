@@ -1,14 +1,18 @@
-import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import React, {useContext} from 'react';
+import {Button} from 'react-native';
+import {Text, View} from 'react-native';
+import {AuthContext} from '../context/AuthContext';
+import {mainStyles} from '../theme/mainStyles';
 
 const Albums = () => {
+  const {authState, logout} = useContext(AuthContext);
+
   return (
-    <View>
-      <Text>Albums screen</Text>
+    <View style={mainStyles.globalMargin}>
+      <Text style={mainStyles.title}>Albums screen</Text>
+      {authState.isLoggedIn && <Button title="logout" onPress={logout} />}
     </View>
   );
 };
 
 export default Albums;
-
-const styles = StyleSheet.create({});

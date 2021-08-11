@@ -1,15 +1,15 @@
 import React from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
-import {StackNavigator} from './StackNavigator';
+import Icon from 'react-native-vector-icons/Ionicons';
 import Settings from '../screens/Settings';
-import {mainStyles} from '../theme/mainStyles';
 import BottomTabs from './BottomTabs';
+import {mainStyles} from '../theme/mainStyles';
 import {
   createDrawerNavigator,
   DrawerContentComponentProps,
   DrawerContentScrollView,
+  DrawerItem,
 } from '@react-navigation/drawer';
-import Icon from 'react-native-vector-icons/Ionicons';
 
 const Drawer = createDrawerNavigator();
 
@@ -55,6 +55,7 @@ const MenuInterno = ({navigation}: DrawerContentComponentProps) => {
           <Text style={mainStyles.textMenu}>Ajustes</Text>
         </TouchableOpacity>
       </View>
+      {/* <DrawerItem label="Profile" onPress={() => {}} /> */}
     </DrawerContentScrollView>
   );
 };

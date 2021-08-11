@@ -1,12 +1,11 @@
 import React from 'react';
+import Icon from 'react-native-vector-icons/Ionicons';
+import {useSafeAreaInsets, EdgeInsets} from 'react-native-safe-area-context';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import Chat from '../screens/Chat';
 import Contacts from '../screens/Contacts';
 import Albums from '../screens/Albums';
-import {useSafeAreaInsets, EdgeInsets} from 'react-native-safe-area-context';
 import {colors} from '../theme/mainStyles';
-import {Text} from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
 
 const Tab = createMaterialTopTabNavigator();
 

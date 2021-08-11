@@ -1,10 +1,18 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {useContext} from 'react';
+import {StyleSheet, Text, View, Button} from 'react-native';
+import {mainStyles} from '../theme/mainStyles';
+import {AuthContext} from '../context/AuthContext';
 
 const Contacts = () => {
+  const {authState, signIn} = useContext(AuthContext);
+  //estamos destrucutrando authState
+  //const {authState: {isLoggedIn}, signIn} = useContext(AuthContext);
+
   return (
-    <View>
-      <Text>Contacts Screen</Text>
+    <View style={mainStyles.globalMargin}>
+      <Text style={mainStyles.title}>Contacts Screen</Text>
+      {!authState.isLoggedIn && <Button title="SignIn" onPress={signIn} />}
     </View>
   );
 };

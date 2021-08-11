@@ -1,13 +1,13 @@
 import React from 'react';
+import {Platform} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
+
 import Tab1 from '../screens/Tab1';
-import {StackNavigator} from './StackNavigator';
-import {colors} from '../theme/mainStyles';
-import {Text} from 'react-native';
-import {Platform} from 'react-native';
 import TopNavigator from './TopNavigator';
-import Icon from 'react-native-vector-icons/Ionicons';
+import {colors} from '../theme/mainStyles';
+import {StackNavigator} from './StackNavigator';
 
 //============================================Android Bottom
 const TabAndroid = createMaterialBottomTabNavigator();

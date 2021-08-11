@@ -3,6 +3,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import {mainStyles} from '../theme/mainStyles';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/Ionicons';
+import TouchabeIcon from '../components/TouchabeIcon';
 
 const Tab1 = () => {
   const {top} = useSafeAreaInsets();
@@ -14,14 +15,14 @@ const Tab1 = () => {
         paddingTop: top,
       }}>
       <Text style={mainStyles.title}>Tab 1 Screen</Text>
-      <Icon name="airplane-outline" size={50} color="#900" />
-      <Icon name="fast-food-outline" size={50} color="#900" />
-      <Icon name="barbell-outline" size={50} color="#900" />
-      <Icon name="bonfire-outline" size={50} color="#900" />
-      <Icon name="cart-outline" size={50} color="#900" />
-      <Icon name="cloud-download-outline" size={50} color="#900" />
-      <Icon name="game-controller-outline" size={50} color="#900" />
-      <Icon name="subway-outline" size={50} color="#900" />
+      <TouchabeIcon name="airplane-outline" />
+      <TouchabeIcon name="fast-food-outline" />
+      <TouchabeIcon name="barbell-outline" />
+      <TouchabeIcon name="bonfire-outline" />
+      <TouchabeIcon name="cart-outline" />
+      <TouchabeIcon name="cloud-download-outline" />
+      <TouchabeIcon name="game-controller-outline" />
+      <TouchabeIcon name="subway-outline" />
     </View>
   );
 };
